@@ -10,6 +10,7 @@ interface AddDocumentModalProps {
 }
 
 export const AddModal: FC<AddDocumentModalProps> = ({ open, onClose, onAdd }) => {
+    // @ts-expect-error Не типизировал стор, так как он маленький и токен везде типизирован
     const token = useSelector(state => state.token);
 
     const [newDocument, setNewDocument] = useState<AddDocumentSchemaType>({ 

@@ -15,6 +15,7 @@ interface TableProps {
 }
 
 export const DataTable: FC<TableProps> = ({data, onDelete, onEdit, onAdd}) => {
+    // @ts-expect-error Не типизировал стор, так как он маленький и токен везде типизирован
     const token = useSelector(state => state.token);
     const [openModal, setOpenModal] = useState<boolean>(false);
     const [addDoc, setAddDoc] = useState<boolean>(false);

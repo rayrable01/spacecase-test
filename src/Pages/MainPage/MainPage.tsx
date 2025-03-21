@@ -4,6 +4,7 @@ import { Alert, CircularProgress } from "@mui/material";
 import { DataTable } from "../../ui/Table/DataTable";
 
 export const MainPage = () => {
+    // @ts-expect-error Не типизировал стор, так как он маленький и токен везде типизирован
     const token = useSelector(state => state.token);
 
     const {data, isLoading, isError, deleteData, editData, addData} = useData(token);
